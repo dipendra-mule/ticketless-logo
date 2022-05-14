@@ -1,6 +1,3 @@
-
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,7 +8,7 @@ void cenq()
 {
 if((rear == size-1 && front == 0) || front == rear + 1)
 {
-    printf("Overflow.....♥");
+    printf("Overflow.....◘◘◘");
 }
 else
 {
@@ -21,7 +18,7 @@ else
     }
     if(rear == size-1 && front != 0) 
     {
-        rear == 0;
+        rear = 0;
     }
     else
     {
@@ -38,7 +35,7 @@ void cdeq()
   
     if(front==-1)
     {
-       printf("Underflow....♣"); 
+       printf("Underflow....◘◘◘"); 
     }
     else
     {
@@ -48,7 +45,7 @@ void cdeq()
             front=-1;
             rear=-1;
         }
-        else if (front = size-1)
+        else if (front == size-1)
         {
             front=0;
         }
@@ -62,7 +59,7 @@ void display()
 {
     if(front==-1)
     {
-       printf("Underflow....♣"); 
+       printf("Underflow....◘◘◘"); 
     }
   else
   {
@@ -70,6 +67,7 @@ void display()
         {
             printf("Queue[%d] = %d\n`",i,cqueue[i]);
         }
+        printf("Queue[%d] = %d\n", rear, cqueue[rear]);
     }
 }
 
@@ -89,19 +87,19 @@ void main ()
         {
             case 1:
             {
-                printf("Enq");
+                printf("Enq\n");
                 cenq();
                 break;
             }
             case 2:
             {
-                printf("Dnq");
+                printf("Dnq\n");
                 cdeq();
                 break;
             }
             case 3:
             {
-                printf("display");
+                printf("display\n");
                 display();
                 break;
             }
